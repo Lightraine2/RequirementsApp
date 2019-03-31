@@ -1,0 +1,13 @@
+/* add googlefont */
+
+#req_personalData {
+  visibility: hidden;
+}
+
+#req_webService {
+  visibility: hidden;
+}
+
+#after_submit {
+  visibility: hidden;
+}

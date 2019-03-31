@@ -1,0 +1,65 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js"></script>
+    <!-- add google font ref here and in stylesheet -->
+    <title>GSO Requirements Application</title>
+  </head>
+  <body>
+    <h1>Security Requirements Generator</h1>
+
+    <form id="questions" name="questions">
+      <p>what is the name of the project?</p>
+      <input id="textbox" type="text" name="question1" />
+
+      <p>Will the product/service use personal data?</p>
+      <input type="radio" id="mc" name="question2" value="noPersonal" />No
+      Personal Data <br />
+      <input type="radio" id="mc" name="question2" value="personal" />Personal
+      Data <br />
+      <input
+        type="radio"
+        id="mc"
+        name="question2"
+        value="personalSensitive"
+      />Sensitive Personal Data <br />
+
+      <p>Is the product/service internet connected?</p>
+      <input type="radio" id="mc" name="question3" value="noInternet" />No
+      Internet Connectivity <br />
+      <input type="radio" id="mc" name="question3" value="outbound" />Outbound
+      Internet Only <br />
+      <input
+        type="radio"
+        id="mc"
+        name="question3"
+        value="inboundWebservice"
+      />Public Facing Web Services <br />
+
+      <input id="button" type="button" value="Submit" onclick="check();" />
+
+      <!-- the onclick event runs the check function in main.js -->
+    </form>
+
+    <div id="after_submit">
+      <p>Thanks for your submission</p>
+    </div>
+
+    <div id="req_personalData">
+      <p>
+        You've got personal data in your application, so make sure you protect
+        it. Here are some guidance resources:
+      </p>
+    </div>
+
+    <div id="req_webService">
+      <p>
+        You have an internet facing web application - make sure you include the
+        following security configurations: Log stuff. Dont suck at code.
+      </p>
+    </div>
+  </body>
+</html>
