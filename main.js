@@ -36,12 +36,22 @@ function check() {
   // need to replicate this process for all questions and requirements
 
   document.getElementById("after_submit").style.visibility = "visible";
+  document.getElementById("resetButton").style.visibility = "visible";
 
   if (personalData > 0) {
     document.getElementById("req_personalData").style.visibility = "visible";
   }
+  if (sensitiveData > 0) {
+    document.getElementById("req_personalDataSensitive").style.visibility = "visible";
+  }
+
   if (webService > 0) {
     console.log("webService Req triggered");
     document.getElementById("req_webService").style.visibility = "visible";
   }
+}
+
+function clearPage() {
+  var x = document.getElementById("myReset").value;
+  document.getElementById("results").innerHTML = x;
 }
