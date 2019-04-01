@@ -29,16 +29,26 @@
         name="question2"
         value="personalSensitive"
       />Sensitive Personal Data <br />
-
-      <p>Is the product/service internet connected?</p>
-      <input type="radio" id="mc" name="question3" value="noInternet" />No
-      Internet Connectivity <br />
-      <input type="radio" id="mc" name="question3" value="outbound" />Outbound
-      Internet Only <br />
+      
+      <p>Where will the product/service be hosted?</p>
+      <input type="radio" id="mc" name="question3" value="cdkHosted" />CDK Data Centre<br />
+      <input type="radio" id="mc" name="question3" value="awsHosted" />Amazon Web Services <br />
       <input
         type="radio"
         id="mc"
         name="question3"
+        value="noHosting"
+      />No Servers/NA <br />
+
+      <p>Is the product/service internet connected?</p>
+      <input type="radio" id="mc" name="question4" value="noInternet" />No
+      Internet Connectivity/Not Applicable <br />
+      <input type="radio" id="mc" name="question4" value="outbound" />Outbound
+      Internet Only <br />
+      <input
+        type="radio"
+        id="mc"
+        name="question4"
         value="inboundWebservice"
       />Public Facing Web Services <br />
 
@@ -50,9 +60,8 @@
     </div>
 
     <div id="results">
-
+      <h2>Issued Security Requirements</h2>
     <div id="after_submit">
-      <p>Application Submitted - Security Requirements issued below:
         <div></div>
         <span id="bold">Requirement: Asset Management</span><br>
         Ensure the product/service has been logged into Lighthouse - the enterprise asset management application.
@@ -73,6 +82,20 @@
       <p>
         You've got sensitive personal data in your application, so make sure you protect
         it. Here are some guidance resources:
+      </p>
+    </div>
+    
+    <div id="req_cdkHosted">
+      <span id="bold">Requirement: CDK Hosting</span><br>
+      <p>
+        Engage Global Hosting Services - Do what they say
+      </p>
+    </div>
+    
+    <div id="req_awsHosted">
+      <span id="bold">Requirement: Cloud Services</span><br>
+      <p>
+        Follow the Cloud Services guidance here:
       </p>
     </div>
 
