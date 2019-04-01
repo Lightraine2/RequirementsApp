@@ -6,14 +6,17 @@
     <link rel="stylesheet" href="style.css" />
     <script src="main.js"></script>
     <!-- add google font ref here and in stylesheet -->
-    <title>GSO Requirements Application</title>
+    <title>Security Requirements Application</title>
   </head>
   <body>
+    <div id="heading">
     <h1>Security Requirements Generator</h1>
+    </div>
 
+    <div id="questionnaire">
     <form id="questions" name="questions">
-      <p>what is the name of the project?</p>
-      <input id="textbox" type="text" name="question1" />
+      <p>Project Name</p>
+      <input id="textbox" type="text" name="question1" placeholder="input name" />
 
       <p>Will the product/service use personal data?</p>
       <input type="radio" id="mc" name="question2" value="noPersonal" />No
@@ -42,24 +45,53 @@
       <input id="button" type="button" value="Submit" onclick="check();" />
 
       <!-- the onclick event runs the check function in main.js -->
+    <input type="reset" />
     </form>
+    </div>
+
+    <div id="results">
 
     <div id="after_submit">
-      <p>Thanks for your submission</p>
+      <p>Application Submitted - Security Requirements issued below:
+        <div></div>
+        <span id="bold">Requirement: Asset Management</span><br>
+        Ensure the product/service has been logged into Lighthouse - the enterprise asset management application.
+        Include product owner and relevant contact information.       
+      </p>
     </div>
 
     <div id="req_personalData">
-      <p>
+      <p>        
+        <span id="bold">Requirement: Data Protection</span><br>
         You've got personal data in your application, so make sure you protect
+        it. Here are some guidance resources:
+      </p>
+    </div>
+    
+    <div id="req_personalDataSensitive">
+      <span id="bold">Requirement: Sensitive Data Protection</span><br>
+      <p>
+        You've got sensitive personal data in your application, so make sure you protect
         it. Here are some guidance resources:
       </p>
     </div>
 
     <div id="req_webService">
       <p>
+        <span id="bold">Requirement: Web Services</span><br>
         You have an internet facing web application - make sure you include the
         following security configurations: Log stuff. Dont suck at code.
       </p>
     </div>
+        <form id="resetButton">
+        <input type="button" onClick="history.go(0)" value="Clear Results">
+        </form>
+  </div>
+
   </body>
 </html>
+
+
+<!-- New reference
+  https://www.sitepoint.com/simple-javascript-quiz/
+-->
